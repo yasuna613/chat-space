@@ -55,7 +55,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, add_index|
+|name|string|null: false, add_index|
 
 ### Association
 - has_many :users, through :members
