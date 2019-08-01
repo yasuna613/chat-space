@@ -1,0 +1,33 @@
+.side-ber{
+  background-color: #2f3e51;
+  color: #fff;
+  font-weight: bold;
+  height: 100%;
+  width: 300px;
+
+  &__header{
+    background-color: #253141;
+    height: 80px;
+    padding: 0 20px;
+    position: relative;
+
+    &__user-name{
+      position:absolute;
+      bottom: 0;
+    }
+  }
+
+  &__menu{
+    padding: 0 20px;
+    &__group-title{
+      font-size: 15px;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+    &__group-info{
+      font-size: 11px;
+      margin-bottom: 20px;
+    } 
+  }
+
+}
