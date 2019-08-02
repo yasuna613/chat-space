@@ -1,4 +1,4 @@
-.side-ber{
+.side{
   background-color: #2f3e51;
   color: #fff;
   font-weight: bold;
@@ -8,26 +8,33 @@
   &__header{
     background-color: #253141;
     height: 80px;
+    width: 260px;
     padding: 0 20px;
-    position: relative;
-
-    &__user-name{
-      position:absolute;
-      bottom: 0;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    &__box{
+      width:100%;
+      &__user-name{
+        float: left;
+      }
+      &__menu{
+        float: right;
+      }
     }
   }
 
-  &__menu{
-    padding: 0 20px;
-    &__group-title{
-      font-size: 15px;
-      margin-top: 20px;
-      margin-bottom: 5px;
+  &__group{
+    padding: 100px 20px 0px 20px;
+    &__box{
+      margin-bottom: 40px;
+      &__title{
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__info{
+        font-size: 11px;
+      }
     }
-    &__group-info{
-      font-size: 11px;
-      margin-bottom: 20px;
-    } 
   }
-
 }

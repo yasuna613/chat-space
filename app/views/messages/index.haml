@@ -1,17 +1,27 @@
 .body
-  .side-ber
-    .side-ber__header
-      .side-ber__user-name
-        yasuna
-    .side-ber__menu
-      .side-ber__menu__group-title
-        sample
-      .side-ber__menu__group-info
-        Good by world
-      .side-ber__menu__group-title
-        sample*
-      .side-ber__menu__group-info
-        See you
+    
+  .side
+    .side__header
+      .side__header__box
+        .side__header__box__user-name
+          %p
+          yasuna
+        .side__header__box__menu
+          = fa_icon "edit"
+          = fa_icon "cog"
+    .side__group
+      .side__group__box
+        %p.side__group__box__title
+          sample
+        %p.side__group__box__info
+          Good by world
+      .side__group__box  
+        %p.side__group__box__title
+          sample*
+        %p.side__group__box__info
+          See you
+
+
       
 
 
