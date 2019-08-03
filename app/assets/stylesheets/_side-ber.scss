@@ -2,12 +2,12 @@
   background-color: #2f3e51;
   color: #fff;
   font-weight: bold;
-  height: 100%;
   width: 300px;
+  float: left;
 
   &__header{
     background-color: #253141;
-    height: 80px;
+    height: 100px;
     width: 260px;
     padding: 0 20px;
     align-items: center;
@@ -17,6 +17,7 @@
       width:100%;
       &__user-name{
         float: left;
+        font-size: 16px;
       }
       &__menu{
         float: right;
@@ -35,7 +36,8 @@
   }
 
   &__group{
-    padding: 100px 20px 0px 20px;
+    padding: 120px 20px 0px 20px;
+    height: calc(100vh - 100px);
     &__box{
       margin-bottom: 40px;
       &__title{
