@@ -20,6 +20,16 @@
       }
       &__menu{
         float: right;
+        a{
+          color:#fff;
+        }
+        ul{
+          li{
+            float:left;
+            margin: 0px 2px;
+    
+          }
+        }
       }
     }
   }
