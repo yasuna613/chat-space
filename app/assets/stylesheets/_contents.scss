@@ -66,7 +66,7 @@
       margin-bottom: 40px;
     }
   }
-  
+
   .message::-webkit-scrollbar {
     display: none;
   }
@@ -80,8 +80,8 @@
       width: 100%;
       &__message{
         position: relative;
-        width: calc(100% - 150px);
-        textarea{
+        width: calc(100% - 115px);
+        input{
           padding: 0 10px;
           height: 50px;
           width: 100%;
@@ -90,6 +90,7 @@
           color: $message-text-color;
           line-height: 50px;
           float: left;
+          box-sizing: border-box;
         }
         label{
           font-size: 20px;
