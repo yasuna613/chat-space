@@ -1,6 +1,7 @@
 .contents{
   width: calc(100vw - 300px);
   float: left;
+  
 
   &__header{
     background-color: #fff;
@@ -42,8 +43,10 @@
 
   &__message{
     background-color: #fafafa;
-    padding: 46px 40px;
     height: calc(100vh - 200px);
+    padding: 46px 40px;
+    overflow-y: scroll;
+    box-sizing: border-box;
 
     &__box{
       margin-bottom:10px;
@@ -71,29 +74,43 @@
     background-color: #dddddd;
     height: 100px;
     padding: 25px 40px;
+    box-sizing: border-box;
     &__box{
-      textarea{
-        padding:0 10px;
-        height:50px;
+      width:100%;
+      &__message{
+        position: relative;
         width: calc(100% - 150px);
-        border: none;
-        font-size:16px;
-        color: #434a54;
-        line-height: 50px;
-        float: left;
+        textarea{
+          padding:0 10px;
+          height:50px;
+          width: 100%;
+          border: none;
+          font-size:16px;
+          color: #434a54;
+          line-height: 50px;
+          float: left;
+        }
+        label{
+          font-size: 20px;
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          cursor: pointer;
+        }
+        #upload-icon{
+          display: none;
+        }
       }
-      input{
-        display: none;
-      }
-    }
-    &__send{
-      input{
-        border: none;
-        background-color: #38aef0;;
-        color: #fff;
-        height: 50px;
-        width: 100px;
-        margin-left: 15px;
+      &__send{
+        &__btn{
+          border: none;
+          background-color: #38aef0;;
+          color: #fff;
+          height: 50px;
+          width: 100px;
+          margin-left: 15px;
+          cursor: pointer;
+        }
       }
     }
   }

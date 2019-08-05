@@ -24,9 +24,33 @@
           sample*
         %p.side__group__box__info
           test
+      .side__group__box
+        %p.side__group__box__title
+          sample*
+        %p.side__group__box__info
+          test
+      .side__group__box
+        %p.side__group__box__title
+          sample*
+        %p.side__group__box__info
+          test
+      .side__group__box
+        %p.side__group__box__title
+          sample*
+        %p.side__group__box__info
+          test 
 
+      .side__group__box
+        %p.side__group__box__title
+          sample*
+        %p.side__group__box__info
+          test  
 
-      
+      .side__group__box
+        %p.side__group__box__title
+          sample*
+        %p.side__group__box__info
+          test           
 
 
   .contents
@@ -60,13 +84,47 @@
       %p.contents__message__text  
         hello
 
+      .contents__message__box
+        %p.contents__message__box__user
+          yasuna
+        %p.contents__message__box__created-at
+          2019/07/24(Wed) 22:22:22
+      %p.contents__message__text  
+        hello
+
+      .contents__message__box
+        %p.contents__message__box__user
+          yasuna
+        %p.contents__message__box__created-at
+          2019/07/24(Wed) 22:22:22
+      %p.contents__message__text  
+        hello
+
+      .contents__message__box
+        %p.contents__message__box__user
+          yasuna
+        %p.contents__message__box__created-at
+          2019/07/24(Wed) 22:22:22
+      %p.contents__message__text  
+        hello
+
+      .contents__message__box
+        %p.contents__message__box__user
+          yasuna
+        %p.contents__message__box__created-at
+          2019/07/24(Wed) 22:22:22
+      %p.contents__message__text  
+        hello
+
     .contents__form
-      .contents__form__box
-        %textarea.contents__form__box__message
-          type a message
-        %label.upload-label{for: "upload-icon"}
-          %i.fa.fa-picture-o
-            %input{type: "file", id: "upload-icon"}
-      .contents__form__send
-        %input{type: "submit", value: "Send"}
+
+      .contens__form__box
+        .contents__form__box__message
+          %textarea.contents__form__box__message__text
+            type a message
+          %label.upload-label{for: "upload-icon"}
+            %i.fa.fa-picture-o
+              %input{type: "file", id: "upload-icon"}
+        .contents__form__box__send
+          %input{type: "submit", value: "Send", class: "contents__form__box__send__btn"}
 

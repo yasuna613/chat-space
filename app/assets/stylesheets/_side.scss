@@ -4,6 +4,7 @@
   font-weight: bold;
   width: 300px;
   float: left;
+  overflow: hidden;
 
   &__header{
     background-color: #253141;
@@ -12,7 +13,6 @@
     padding: 0 20px;
     align-items: center;
     display: flex;
-    position: fixed;
     &__box{
       width:100%;
       &__user-name{
@@ -36,8 +36,10 @@
   }
 
   &__group{
-    padding: 120px 20px 0px 20px;
+    padding: 20px 20px 0px 20px;
     height: calc(100vh - 100px);
+    overflow-y: scroll;
+    box-sizing: border-box;
     &__box{
       margin-bottom: 40px;
       &__title{
