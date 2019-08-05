@@ -1,130 +1,116 @@
 .body
-  .side
-    .side__header
-      .side__header__box
-        .side__header__box__user-name
+  .side-bar
+    .header
+      .header__box
+        .header__box__user-name
           %p
           yasuna
-        .side__header__box__menu
+        .header__box__menu
           %ul
-            %li.side__header__box__menu__edit
-              =link_to "/", class: "side__header__box__menu__btn" do
+            %li.header__box__menu__edit
+              =link_to "/", class: "header__box__menu__btn" do
                 = fa_icon "edit"
-            %li.side__header__box__menu__cog
-              =link_to "/", class: "side__header__box__menu__btn" do
+            %li.header__box__menu__cog
+              =link_to "/", class: "header__box__menu__btn" do
                 = fa_icon "cog"
-    .side__group
-      .side__group__box
-        %p.side__group__box__title
+    .group
+      .group__box
+        %p.group__box__title
           sample
-        %p.side__group__box__info
+        %p.group__box__info
           Good by world
-      .side__group__box  
-        %p.side__group__box__title
+      .group__box  
+        %p.group__box__title
           sample*
-        %p.side__group__box__info
-          test
-      .side__group__box
-        %p.side__group__box__title
+        %p.group__box__info
+          まだメッセージがありません
+      .group__box
+        %p.group__box__title
           sample*
-        %p.side__group__box__info
-          test
-      .side__group__box
-        %p.side__group__box__title
+        %p.group__box__info
+          まだメッセージがありません
+      .group__box
+        %p.group__box__title
           sample*
-        %p.side__group__box__info
-          test
-      .side__group__box
-        %p.side__group__box__title
+        %p.group__box__info
+          まだメッセージがありません
+      .group__box
+        %p.group__box__title
           sample*
-        %p.side__group__box__info
-          test 
-
-      .side__group__box
-        %p.side__group__box__title
+        %p.group__box__info
+          まだメッセージがありません 
+      .group__box
+        %p.group__box__title
           sample*
-        %p.side__group__box__info
-          test  
-
-      .side__group__box
-        %p.side__group__box__title
+        %p.group__box__info
+          まだメッセージがありません  
+      .group__box
+        %p.group__box__title
           sample*
-        %p.side__group__box__info
-          test           
-
-
+        %p.group__box__info
+          まだメッセージがありません           
   .contents
-
-    .contents__header
-      .contents__header__group
-        %p.contents__header__group__title
-          sample*
-      
-      .contents__header__btn
-        %p.contents__header__btn__edit
+    .header
+      .header__group
+        %p.header__group__title
+          sample     
+      .header__btn
+        %p.header__btn__edit
           Edit
-      .contents__header__members
-        %p.contents__header__members__name
+      .header__members
+        %p.header__members__name
           Members：yasuna
-
-    .contents__message
-      .contents__message__box
-        %p.contents__message__box__user
+    .message
+      .message__box
+        %p.message__box__user
           yasuna
-        %p.contents__message__box__created-at
+        %p.message__box__created-at
           2019/07/24(Wed) 20:10:53
-      %p.contents__message__text  
+      %p.message__text  
         test
-
-      .contents__message__box
-        %p.contents__message__box__user
+      .message__box
+        %p.message__box__user
           yasuna
-        %p.contents__message__box__created-at
+        %p.message__box__created-at
           2019/07/24(Wed) 22:22:22
-      %p.contents__message__text  
+      %p.message__text  
         hello
-
-      .contents__message__box
-        %p.contents__message__box__user
+      .message__box
+        %p.message__box__user
           yasuna
-        %p.contents__message__box__created-at
+        %p.message__box__created-at
           2019/07/24(Wed) 22:22:22
-      %p.contents__message__text  
+      %p.message__text  
         hello
-
-      .contents__message__box
-        %p.contents__message__box__user
+      .message__box
+        %p.message__box__user
           yasuna
-        %p.contents__message__box__created-at
+        %p.message__box__created-at
           2019/07/24(Wed) 22:22:22
-      %p.contents__message__text  
+      %p.message__text  
         hello
-
-      .contents__message__box
-        %p.contents__message__box__user
+      .message__box
+        %p.message__box__user
           yasuna
-        %p.contents__message__box__created-at
+        %p.message__box__created-at
           2019/07/24(Wed) 22:22:22
-      %p.contents__message__text  
+      %p.message__text  
         hello
-
-      .contents__message__box
-        %p.contents__message__box__user
+      .message__box
+        %p.message__box__user
           yasuna
-        %p.contents__message__box__created-at
-          2019/07/24(Wed) 22:22:22
-      %p.contents__message__text  
-        hello
-
-    .contents__form
-
-      .contens__form__box
-        .contents__form__box__message
-          %textarea.contents__form__box__message__text
-            type a message
+        %p.message__box__created-at
+          2019/07/24(Wed) 23:59:18
+      %p.message__text  
+        Good by world
+    .form
+      .form__box
+        .form__box__message
+          %textarea{placeholder: "type a message", class: "form__box__message__text"}
+            
           %label.upload-label{for: "upload-icon"}
             %i.fa.fa-picture-o
               %input{type: "file", id: "upload-icon"}
-        .contents__form__box__send
-          %input{type: "submit", value: "Send", class: "contents__form__box__send__btn"}
+        .form__box__send
+          %input{type: "submit", value: "Send", class: "form__box__send__btn"}
 
