@@ -1,0 +1,56 @@
+.side-bar{
+  color: $side-font-color;
+  width: 300px;
+  float: left;
+
+  .header{
+    background-color: $side-heder-color;
+    height: 100px;
+    width: 260px;
+    padding: 0 20px;
+    align-items: center;
+    font-weight: bold;
+    display: flex;
+    &__box{
+      width: 100%;
+      &__user-name{
+        float: left;
+        font-size: 16px;
+      }
+      &__menu{
+        float: right;
+        a{
+          color: $side-font-color;
+        }
+        ul{
+          li{
+            float: left;
+            margin: 0px 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .group{
+    background-color: $side-group-color;
+    padding: 20px 20px 0px 20px;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+    box-sizing: border-box;
+    &__box{
+      margin-bottom: 40px;
+      &__title{
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__info{
+        font-size: 11px;
+      }
+    }
+  }
+
+  .group::-webkit-scrollbar {
+    display: none;
+  }
+}
