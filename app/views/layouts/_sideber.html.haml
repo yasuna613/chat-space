@@ -1,0 +1,50 @@
+.side-bar
+  .header
+    .header__box
+      .header__box__user-name
+        %p
+        =current_user.name
+      .header__box__menu
+        %ul
+          %li.header__box__menu__edit
+            =link_to "/", class: "header__box__menu__btn" do
+              = fa_icon "edit"
+          %li.header__box__menu__cog
+            = link_to edit_user_path(current_user) do
+              = fa_icon 'cog', class: 'icon'
+  .group
+    .group__box
+      %p.group__box__title
+        sample
+      %p.group__box__info
+        Good by world
+    .group__box  
+      %p.group__box__title
+        sample*
+      %p.group__box__info
+        まだメッセージがありません
+    .group__box
+      %p.group__box__title
+        sample*
+      %p.group__box__info
+        まだメッセージがありません
+    .group__box
+      %p.group__box__title
+        sample*
+      %p.group__box__info
+        まだメッセージがありません
+    .group__box
+      %p.group__box__title
+        sample*
+      %p.group__box__info
+        まだメッセージがありません 
+    .group__box
+      %p.group__box__title
+        sample*
+      %p.group__box__info
+        まだメッセージがありません  
+    .group__box
+      %p.group__box__title
+        sample*
+      %p.group__box__info
+        まだメッセージがありません   
