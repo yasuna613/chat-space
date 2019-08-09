@@ -13,38 +13,10 @@
             = link_to edit_user_path(current_user) do
               = fa_icon 'cog', class: 'icon'
   .group
-    .group__box
-      %p.group__box__title
-        sample
-      %p.group__box__info
-        Good by world
-    .group__box  
-      %p.group__box__title
-        sample*
-      %p.group__box__info
-        まだメッセージがありません
-    .group__box
-      %p.group__box__title
-        sample*
-      %p.group__box__info
-        まだメッセージがありません
-    .group__box
-      %p.group__box__title
-        sample*
-      %p.group__box__info
-        まだメッセージがありません
-    .group__box
-      %p.group__box__title
-        sample*
-      %p.group__box__info
-        まだメッセージがありません 
-    .group__box
-      %p.group__box__title
-        sample*
-      %p.group__box__info
-        まだメッセージがありません  
-    .group__box
-      %p.group__box__title
-        sample*
-      %p.group__box__info
-        まだメッセージがありません   
+    - current_user.groups.each do |group|
+      .group__box
+        = link_to "/" do
+          %p.group__box__title
+            = group.name
+          %p.group__box__info
+            Good by world
