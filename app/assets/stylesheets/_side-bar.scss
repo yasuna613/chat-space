@@ -3,6 +3,15 @@
   width: 300px;
   float: left;
 
+    
+  a:link{
+    color: #fff;
+    text-decoration:none;
+  }
+  a:visited{
+    color: #fff;
+  }
+
   .header{
     background-color: $side-heder-color;
     height: 100px;
@@ -38,6 +47,7 @@
     height: calc(100vh - 100px);
     overflow-y: scroll;
     box-sizing: border-box;
+
     &__box{
       margin-bottom: 40px;
       &__title{
