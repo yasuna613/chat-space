@@ -8,6 +8,4 @@ class User < ApplicationRecord
   has_many :messages
   has_many :members
 
-  belongs_to :user
-  belongs_to :group
 end
