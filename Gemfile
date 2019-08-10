@@ -73,3 +73,6 @@ end
 gem 'haml-rails'
 gem "font-awesome-rails"
 
+gem 'carrierwave'
+gem 'rmagick', require: 'RMagick'
+

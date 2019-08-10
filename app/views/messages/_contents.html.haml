@@ -53,13 +53,12 @@
     %p.message__text  
       Good by world
   .form
-    .form__box
-      .form__box__message
-        %input{placeholder: "type a message", class: "form__box__message__text"}
-            
-        %label.upload-label{for: "upload-icon"}
-          %i.fa.fa-picture-o
-            %input{type: "file", id: "upload-icon"}
+    = form_for @message, :url => { :controller => :messages, :action => :create } do |f|
+      .form__box
+        .form__box__message
+          = f.text_field :text, class: "form__box__message__text", placeholder: "type a message"            
+          %label.upload-label{for: "upload-icon"}
+            %i.fa.fa-picture-o
+              = f.file_field :image, id: "upload-icon"
       .form__box__send
-        %input{type: "submit", value: "Send", class: "form__box__send__btn"}
-
+        = f.submit value: "Send", class: "form__box__send__btn"
