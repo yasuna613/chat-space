@@ -1,6 +1,9 @@
 .contents{
   width: calc(100vw - 300px);
   float: left;
+  a:link{
+    text-decoration:none;
+  }
 
   .header{
     background-color: #fff;

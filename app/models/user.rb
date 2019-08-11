@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :messages
   has_many :members
 
+  validates :name, presence: true, uniqueness: true
+
 end
