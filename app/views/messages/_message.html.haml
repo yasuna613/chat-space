@@ -1,0 +1,10 @@
+.message__box
+  %p.message__box__user
+    = message.user.name
+  %p.message__box__created-at
+    = message.created_at
+-if message.text.present?
+  %p.message__text  
+    = message.text
+-else
+  = image_tag message.image_url(:thumb)

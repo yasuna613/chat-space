@@ -2,57 +2,19 @@
   .header
     .header__group
       %p.header__group__title
-        sample     
+        = @group.name     
     .header__btn
       = link_to edit_group_path(@group) do
         %p.header__btn__edit
           Edit
     .header__members
       %p.header__members__name
-        Members：yasuna
+        Members：
+        - @group.users.each do |group_name|
+          = group_name.name + ","
   .message
-    .message__box
-      %p.message__box__user
-        yasuna
-      %p.message__box__created-at
-        2019/07/24(Wed) 20:10:53
-    %p.message__text  
-      test
-    .message__box
-      %p.message__box__user
-        yasuna
-      %p.message__box__created-at
-        2019/07/24(Wed) 22:22:22
-    %p.message__text  
-      hello
-    .message__box
-      %p.message__box__user
-        yasuna
-      %p.message__box__created-at
-        2019/07/24(Wed) 22:22:22
-    %p.message__text  
-      hello
-    .message__box
-      %p.message__box__user
-        yasuna
-      %p.message__box__created-at
-        2019/07/24(Wed) 22:22:22
-    %p.message__text  
-      hello
-    .message__box
-      %p.message__box__user
-        yasuna
-      %p.message__box__created-at
-        2019/07/24(Wed) 22:22:22
-    %p.message__text  
-      hello
-    .message__box
-      %p.message__box__user
-        yasuna
-      %p.message__box__created-at
-        2019/07/24(Wed) 23:59:18
-    %p.message__text  
-      Good by world
+    = render @messages
+
   .form
     = form_for @message, url: group_messages_path do |f|
       .form__box
