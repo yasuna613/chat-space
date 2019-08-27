@@ -1,10 +1,11 @@
 .message__box
-  %p.message__box__user
-    = message.user.name
-  %p.message__box__created-at
-    = message.created_at
--if message.text.present?
-  %p.message__text  
-    = message.text
--else
-  = image_tag message.image_url(:thumb)
+  .message__top
+    %p.message__top__user
+      = message.user.name
+    %p.message__top__created-at
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .message__bottom
+    -if message.text.present?
+      %p.message__bottom__text  
+        = message.text
+    = image_tag message.image.url, class: 'message__bottom__image' if message.image.present?
