@@ -59,7 +59,7 @@ $(function(){
       }
     })
     .fail(function(){
-      alert('エラー');
+      alert('ユーザー検索に失敗しました');
     });
   });
 
