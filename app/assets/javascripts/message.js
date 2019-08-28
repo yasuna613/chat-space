@@ -35,9 +35,9 @@ $(function(){
     .done(function(message){
       var html = buildPost(message);
       $('.message').append(html);
-      $('.form__box__message__text').val('');
       $('.form__box__send__btn').attr('disabled', false);
       $('.message').animate({scrollTop: $('.message')[0].scrollHeight}, 'fast');
+      $('#new_message')[0].reset();
     })
     .fail(function(){
       alert('エラー');
