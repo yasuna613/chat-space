@@ -1,7 +1,7 @@
 $(function(){
   function buildPost(message){
     var image = message.image.url? `<img class="message__bottom__image" src="${message.image.url}">`: "";
-    var html = `<div class="message__box">
+    var html = `<div class="message__box" data-message-id="${message.id}">
                   <div class="message__top">
                     <p class="message__top__user">
                       ${message.name}
@@ -44,4 +44,29 @@ $(function(){
     });
 
   });
+
+  var reloadMessages = function() {
+    last_message_id = $('.message__box:last').data('message-id')
+    $.ajax({
+      url: 'api/messages',
+      type: 'get',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      var insertHTML = '';
+      messages.forEach(function(message){
+        insertHTML = buildPost(message);
+        $('.message').append(insertHTML);
+      });
+      $('.message').animate({scrollTop: $('.message')[0].scrollHeight}, 'fast');
+    })
+    .fail(function() {
+      alert('error');
+    });
+  };
+
+  if (document.URL.match(/\/groups\/\d+\/messages/)) {
+    setInterval(reloadMessages, 5000);
+  }
 });
