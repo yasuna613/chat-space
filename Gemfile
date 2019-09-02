@@ -61,17 +61,17 @@ gem 'devise'
 
 # 開発環境にのみ必要
 group :development do 
-     gem 'rspec'
+  gem 'rspec'
 end
 
 # テスト環境にのみ必要
 group :test do 
-     gem 'rspec'
+  gem 'rspec'
 end
 
 # 本番環境にのみ必要
 group :production do 
-     gem 'unicorn'
+  gem 'unicorn', '5.4.1'
 end
 
 gem 'haml-rails'
