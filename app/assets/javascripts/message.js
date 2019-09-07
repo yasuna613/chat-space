@@ -45,6 +45,10 @@ $(document).on('turbolinks:load', function() {
 
   });
 
+  if (document.URL.match(/\/groups\/\d+\/messages/)) {
+    setInterval(reloadMessages, 5000);
+  }
+
   var reloadMessages = function() {
     last_message_id = $('.message__box:last').data('message-id')
     $.ajax({
@@ -65,8 +69,4 @@ $(document).on('turbolinks:load', function() {
       alert('error');
     });
   };
-
-  if (document.URL.match(/\/groups\/\d+\/messages/)) {
-    setInterval(reloadMessages, 5000);
-  }
 });
