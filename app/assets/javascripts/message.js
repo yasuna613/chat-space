@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function(){
   function buildPost(message){
     var image = message.image.url? `<img class="message__bottom__image" src="${message.image.url}">`: "";
     var html = `<div class="message__box" data-message-id="${message.id}">
