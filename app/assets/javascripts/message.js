@@ -45,11 +45,11 @@ $(document).on('turbolinks:load', function(){
 
   });
 
-  if (document.URL.match(/\/groups\/\d+\/messages/)) {
+  if (document.URL.match(/\/groups\/\d+\/messages/)){
     setInterval(reloadMessages, 5000);
-  }
+  };
 
-  var reloadMessages = function() {
+  var reloadMessages = function(){
     last_message_id = $('.message__box:last').data('message-id')
     $.ajax({
       url: 'api/messages',
@@ -57,7 +57,7 @@ $(document).on('turbolinks:load', function(){
       dataType: 'json',
       data: {id: last_message_id}
     })
-    .done(function(messages) {
+    .done(function(messages){
       var insertHTML = '';
       messages.forEach(function(message){
         insertHTML = buildPost(message);
@@ -65,7 +65,7 @@ $(document).on('turbolinks:load', function(){
       });
       $('.message').animate({scrollTop: $('.message')[0].scrollHeight}, 'fast');
     })
-    .fail(function() {
+    .fail(function(){
       alert('error');
     });
   };
