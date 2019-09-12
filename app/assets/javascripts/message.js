@@ -42,32 +42,29 @@ $(document).on('turbolinks:load', function(){
     .fail(function(){
       alert('エラー');
     });
-
   });
 
-  function reloadMessages(){
-    last_message_id = $('.message__box:last').data('message-id')
-    $.ajax({
-      url: 'api/messages',
-      type: 'get',
-      dataType: 'json',
-      data: {id: last_message_id}
-    })
-    .done(function(messages){
-      var insertHTML = '';
-      messages.forEach(function(message){
-        insertHTML = buildPost(message);
-        $('.message').append(insertHTML);
+  var reloadMessages = function() {
+    if (document.URL.match(/\/groups\/\d+\/messages/)) {
+      last_message_id = $('.message__box:last').data('message-id')
+      $.ajax({
+        url: 'api/messages',
+        type: 'get',
+        dataType: 'json',
+        data: {id: last_message_id}
+      })
+      .done(function(messages) {
+        var insertHTML = '';
+        messages.forEach(function(message){
+          insertHTML = buildPost(message);
+          $('.message').append(insertHTML);
+        });
+        $('.message').animate({scrollTop: $('.message')[0].scrollHeight}, 'fast');
+      })
+      .fail(function() {
+        alert('error');
       });
-      $('.message').animate({scrollTop: $('.message')[0].scrollHeight}, 'fast');
-    })
-    .fail(function(){
-      alert('error');
-    });
+    }
   };
-
-  if (document.URL.match(/\/groups\/\d+\/messages/)){
-    setInterval(reloadMessages, 5000);
-  };
-
+  setInterval(reloadMessages, 5000);
 });
