@@ -45,7 +45,7 @@ $(document).on('turbolinks:load', function(){
 
   });
 
-  function reloadMessages = function(){
+  function reloadMessages(){
     last_message_id = $('.message__box:last').data('message-id')
     $.ajax({
       url: 'api/messages',
